@@ -1,0 +1,146 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25em;
+    background: url("../cssMemSlider/images/background.png") repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 60vw;
+    max-height: 90vh;
+}
+
+h1 {
+    color: #323e4e;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.slider {  
+    padding: 5vh 5vw;  
+    background: #cfd0d3;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.slides {
+    overflow: hidden;  
+}
+
+.slides input {
+    display: none;
+}
+
+.slides .img {
+    display: flex;
+    width: 400%;
+    transition: all 1s ease-out 0s;  
+}
+
+.slide {
+    width: 25%;
+}
+
+.slide img {
+    width: 100%; 
+}
+
+.bottom-content {
+    display: flex;
+    padding-top: 1rem;
+}
+  
+.wrapper-text {
+    overflow: hidden;
+}
+  
+.text {
+    display: flex;
+    width: 400%;
+    transition: all 1s ease-out 0s;
+}
+  
+.title {
+    width: 25%;  
+    padding: 0.2rem 0;
+}
+  
+.controls {
+    display: flex;
+}
+  
+.controls label {
+    cursor: pointer;  
+    padding:  10px;
+}
+  
+label .button {  
+    background: #a0a0a0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;  
+}
+  
+label:hover .button {  
+    background: #fff;
+}
+  
+label:active .button {
+    transform: scale(1.2);
+    background: #323e4e;
+}
+
+#slide1:checked ~ .bottom-content label[for=slide1] .button,
+#slide2:checked ~ .bottom-content label[for=slide2] .button,
+#slide3:checked ~ .bottom-content label[for=slide3] .button,
+#slide4:checked ~ .bottom-content label[for=slide4] .button {
+    background: #323e4e;  
+}
+
+#slide1:checked ~ .img,
+#slide1:checked ~ .bottom-content .text {
+    transform: translate(0%, 0%);
+}
+
+#slide2:checked ~ .img,
+#slide2:checked ~ .bottom-content .text {
+    transform: translate(-25%, 0%);
+}
+
+#slide3:checked ~ .img,
+#slide3:checked ~ .bottom-content .text {
+    transform: translate(-50%, 0%);
+}
+
+#slide4:checked ~ .img,
+#slide4:checked ~ .bottom-content .text {
+    transform: translate(-75%, 0%);
+}
+
+@media screen and (max-width: 768px){
+    body {
+      font-size: 1em;
+    }
+  
+    .wrapper {
+      max-width: 90vw;
+    }
+  
+    h1 {
+      font-size: 1.25em;
+    }
+  
+}
+  
+@media screen and (max-width: 480px){  
+  
+    .bottom-content {
+      flex-direction: column-reverse;    
+    }
+  
+    .controls {
+      align-self: center;
+    }  
+  
+}
