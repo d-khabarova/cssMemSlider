@@ -86,3 +86,30 @@ label:active .button {
     transform: scale(1.2);
     background: #323e4e;
 }
+
+#slide1:checked ~ .bottom-content label[for=slide1] .button,
+#slide2:checked ~ .bottom-content label[for=slide2] .button,
+#slide3:checked ~ .bottom-content label[for=slide3] .button,
+#slide4:checked ~ .bottom-content label[for=slide4] .button {
+    background: #323e4e;  
+}
+
+#slide1:checked ~ .img,
+#slide1:checked ~ .bottom-content .text {
+    transform: translate(0%, 0%);
+}
+
+#slide2:checked ~ .img,
+#slide2:checked ~ .bottom-content .text {
+    transform: translate(-25%, 0%);
+}
+
+#slide3:checked ~ .img,
+#slide3:checked ~ .bottom-content .text {
+    transform: translate(-50%, 0%);
+}
+
+#slide4:checked ~ .img,
+#slide4:checked ~ .bottom-content .text {
+    transform: translate(-75%, 0%);
+}
