@@ -1,6 +1,6 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;	
-	font-size: 1.25em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25em;
     background: url("../cssMemSlider/images/background.png") repeat;
 }
 
@@ -28,7 +28,7 @@ h1 {
     display: none;
 }
 
-.img {
+.slides .img {
     display: flex;
     width: 400%;
     transition: all 1s ease-out 0s;  
@@ -38,7 +38,7 @@ h1 {
     width: 25%;
 }
 
-img {
+.slide img {
     width: 100%; 
 }
 
@@ -112,4 +112,31 @@ label:active .button {
 #slide4:checked ~ .img,
 #slide4:checked ~ .bottom-content .text {
     transform: translate(-75%, 0%);
+}
+
+@media screen and (max-width: 768px){
+    body {
+      font-size: 1em;
+    }
+  
+    .wrapper {
+      max-width: 90vw;
+    }
+  
+    h1 {
+      font-size: 1.5em;
+    }
+  
+}
+  
+@media screen and (max-width: 480px){  
+  
+    .bottom-content {
+      flex-direction: column-reverse;    
+    }
+  
+    .controls {
+      align-self: center;
+    }  
+  
 }
